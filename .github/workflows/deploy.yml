@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug secrets
+        run: echo "EC2_HOST=${{ secrets.EC2_HOST }} EC2_SSH_KEY=${{ secrets.EC2_SSH_KEY }}"
+
       - name: Checkout code
         uses: actions/checkout@v2
 
